@@ -3,9 +3,6 @@ import React, { useEffect, useState } from 'react'
 import ActivityLoader from './components/ActivityLoader'
 import { useNavigation } from '@react-navigation/native';
 import axios from 'react-native-axios';
-import { ScrollView } from 'react-native-gesture-handler';
-import { jsiConfigureProps } from 'react-native-reanimated/lib/typescript/reanimated2/core';
-import { JumpingTransition } from 'react-native-reanimated';
 // import { SliderBox } from 'react-native-image-slider-box'
 
 const WIDTH = Dimensions.get('window').width;
@@ -47,7 +44,7 @@ const ProductDetails = ({ route }) => {
 
     useEffect(() => {
         handleProductDetail().then((data) => {
-            console.log('helloo', data.thumbnail)
+            // console.log('helloo', data.thumbnail)
             setProductData(data)
             setIsLoading(false)
 
@@ -58,9 +55,6 @@ const ProductDetails = ({ route }) => {
     }, [])
 
     console.log("check::", productData)
-    // useEffect(() => {
-    //     console.log("sfcu", productData)
-    // }, [])
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: 'white', }}>

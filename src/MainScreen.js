@@ -40,7 +40,7 @@ const MainScreen = () => {
   useEffect(() => {
 
     handleProductList().then((data) => {
-      console.log("response::", data.products);
+      // console.log("response::", data.products);
       setUserData(data.products)
       setIsLoading(false)
     })
